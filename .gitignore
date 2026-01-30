@@ -1,0 +1,8 @@
+parts/
+backup/
+code/.venv/
+code/.idea/
+old/
+Curve Equations.txt
+equations.txt
+housing_assembly backup 5mm.SLDASM
