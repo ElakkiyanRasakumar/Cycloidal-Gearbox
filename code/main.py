@@ -12,13 +12,13 @@ CENTER = (640, 360)
 points = []
 angles = []
 
+eccentric_bearing_OD = 15 # non changing
+output_bearing_OD = 13 # non changing
+roller_radius = 6.5 # non changing
+eccentricity = roller_radius * 0.325
+output_hole_diameter = output_bearing_OD + 2 * eccentricity # non changing
 outer_radius = 40
-roller_radius = 6.5
-eccentricity = 6.5 * 0.325
 number_of_rollers = 15
-eccentric_bearing_OD = 15
-output_bearing_OD = 13
-output_hole_diameter = output_bearing_OD + 2 * eccentricity
 distance_from_eccentric_center = 20
 number_of_output_holes = 5
 
@@ -98,7 +98,7 @@ while running:
 
     for event in pygame.event.get():
         if event.type == pygame.MOUSEWHEEL:
-            if SCALE > 1:
+            if SCALE >= 1:
                 SCALE += event.y
                 get_disk_points()
 
